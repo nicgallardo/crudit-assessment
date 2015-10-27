@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 Super Hero Log
+  p
+    a(href="/") home
+  p
+    a(href="/list") View all Super Heros
+  div(class="row")
+    div(class="col-md-6 col-md-offset=3")
+        h2= hero.hero
+        h3 Power: 
+          span= hero.power
+        p
+          a(href="/list/#{hero._id}/edit") edit
+        p
+        form(action="/list/#{hero._id}/delete" method="post")
+          p
+          input(type="submit" value="DELETE!")
+
+      

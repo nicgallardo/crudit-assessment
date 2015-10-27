@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 Super Hero Log
+  div(class="row")
+    div(class="col-md-6 col-md-offset=3")
+      a(href="/list") See List of Heros
+      h2 Create Hero
+      form(action="/create-hero" method="post")
+        p
+          label(for="heroName") Hero Name
+            input(type="text" id="heroName" name="heroName")
+        p
+          label(for="heroPower") Hero Power
+            input(type="text" id="heroPower" name="heroPower")
+        p
+        button(type="submit") Submit
+            
